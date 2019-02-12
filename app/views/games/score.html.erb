@@ -1,0 +1,13 @@
+<h1>Games#score</h1>
+
+<% if @condition %>
+  <% if @json %>
+    <p>Congratulations! <%= @word %> is a valid English word</p>
+  <% else %>
+    <p><%= @word %> doesn't seem to be a valid English word</p>
+  <% end %>
+<% else %>
+  <p><%= @word %> cannot be made out of <%= @letters %></p>
+<% end %>
+
+<%= link_to "Play again", new_path %>
